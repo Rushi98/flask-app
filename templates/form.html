@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Form</title>
+		<style>
+			table, th, td {
+			  border: 1px solid black;
+			  border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>key</th>
+				<th>value</th>
+			</tr>
+			{% for entry in form.items(multi=True) %}
+			<tr>
+				<td>{{ entry[0] }} </td>
+				<td>{{ entry[1] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
