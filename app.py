@@ -8,4 +8,7 @@ def index():
 
 @app.route("/form", methods=['GET','POST'])
 def form():
-    return render_template('form.html', form=request.form)
+    result = ""
+    for entry in request.form.items(multi=True):
+        result = result + entry[0] + " = " + entry[1] + "\n"
+    return result
