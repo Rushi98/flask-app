@@ -9,6 +9,7 @@ def index():
 @app.route("/form", methods=['GET','POST'])
 def form():
     result = ""
-    for entry in request.form.items(multi=True):
-        result = result + entry[0] + " = " + entry[1] + "\n"
+    form = request.form
+    result = result + "<p>" + "name is " + form["name"] + "</p>"
+    result = result + "<p>" + "school is " + form["school"] + "</p>" 
     return result

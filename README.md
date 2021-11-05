@@ -4,6 +4,21 @@
 docker-compose up
 ```
 
+## Virtualenv
+### Installation
+```sh
+python -m venv flask
+source flask/bin/activate
+pip install --no-cache-dir -r requirements.txt
+```
+### Running
+```sh
+cd flask-app
+source flask/bin/activate
+export FLASK_RUN_PORT=8080
+flask run --host=0.0.0.0
+```
+
 # References:
 1. Flask Quickstart: https://flask.palletsprojects.com/en/2.0.x/quickstart/
 2. requirements.txt file format: https://pip.pypa.io/en/stable/reference/requirements-file-format/
